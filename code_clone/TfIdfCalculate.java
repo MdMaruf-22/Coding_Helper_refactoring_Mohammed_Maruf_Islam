@@ -34,22 +34,16 @@ public class TfIdfCalculate {
                 while ((s = in.readLine()) != null) {
                     sb.append(s);
                 }
-                // System.out.println("sb=" + sb);
                 if (path.equals(CloneCheck.path1)) {
-                 //  System.out.println("="+path);
                     FileWordProject1.add(sb.toString().trim().split(" "));
-
                 }
                 if (path.equals(CloneCheck.path2)) {
-                  //  System.out.println("2="+path);
                     FileWordProject2.add(sb.toString().trim().split(" "));
                 }
-               // System.out.println("" + sb1);
                 sb1.append(" ").append(sb);
-                processProjectFile.add(sb.toString().trim());//contains two project file one by one 
+                processProjectFile.add(sb.toString().trim());
             }
         }
-
         String allterm[] = sb1.toString().trim().split(" ");
         return allterm;
     }
@@ -59,7 +53,7 @@ public class TfIdfCalculate {
 
         for (String term : allterm) {
             if (!allterms1.contains(term)) {
-                allterms1.add(term); //project1 unique word
+                allterms1.add(term);
             }
         }
 
@@ -69,7 +63,7 @@ public class TfIdfCalculate {
         String[] allterm = fileRead(path2);
         for (String term : allterm) {
             if (!allterms2.contains(term)) {
-                allterms2.add(term);//project2 unique word
+                allterms2.add(term);
             }
         }
     }
@@ -96,23 +90,16 @@ public class TfIdfCalculate {
                 tf = new code_clone.getTfIdf().getTf(fileword, term);
                 if (idfmap.containsKey(term)) {
                     idf = idfmap.get(term);
-                    //   System.out.println(term+" "+idf);
                 } else {
                     idf = 0;
                 }
                 tfidf = tf * idf;
-                //  System.out.println(term+" 1="+tfidf);
                 tfidfvector[count] = tfidf;
                 count++;
-                //  System.out.println(term+" tfidf="+tfidf);
             }
             tfidfvectorProject1.add(tfidfvector);
         }
-       // System.out.println(""+CloneCheck.ProjectFileName1.size());
-       // System.out.println("f="+FileWordProject1.size());
-      //  System.out.println("t="+tfidfvectorProject1.size());
     }
-
     public void tfIdfVectorProject2() {
         double tf;
         double idf;
@@ -125,15 +112,12 @@ public class TfIdfCalculate {
                 tf = new getTfIdf().getTf(fileword, term);
                 if (idfmap.containsKey(term)) {
                     idf = idfmap.get(term);
-                    //   System.out.println(term+" "+idf);
                 } else {
                     idf = 0;
                 }
                 tfidf = tf * idf;
-                // System.out.println(term+" 2="+tfidf);
                 tfidfvector[count] = tfidf;
                 count++;
-                //  System.out.println(term+" tfidf="+tfidf);
             }
             tfidfvectorProject2.add(tfidfvector);
             
