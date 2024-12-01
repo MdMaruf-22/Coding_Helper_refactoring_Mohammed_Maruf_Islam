@@ -20,28 +20,23 @@ import org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset;
 
 public class BoxAndWhiskerChart {
     ChartPanel chartPanel;
-
     JScrollPane scrollPane;
-
     private List<Double> getInputData(double l[]) {
         ArrayList<Double> list = new ArrayList<>();
         for (int j = 0; j < l.length; j++) {
-            double d = l[j];
-            //    System.out.println("k=="+l[j]);
             list.add(l[j]);
 
-        }//System.out.println("");
+        }
         return list;
     }
 
     public void display() {
         JFrame f = new JFrame("Clone_Check");
 
-        f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        f.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         DefaultBoxAndWhiskerCategoryDataset boxData = new DefaultBoxAndWhiskerCategoryDataset();
 
         for (int i = 0; i < CosineSimilarity.similarArray.size(); i++) {
-            // System.out.println("p="+CosineSimilarity.similarArray.g);
             boxData.add(getInputData(CosineSimilarity.similarArray.get(i)), "First_Project vs Second_Project", CloneCheck.ProjectFileName1.get(i));
         }
         BoxAndWhiskerRenderer renderer = new BoxAndWhiskerRenderer();
@@ -60,9 +55,7 @@ public class BoxAndWhiskerChart {
                 plot,
                 true
         );
-        final ChartPanel chartPanel = new ChartPanel(chart);
         chart.setBackgroundPaint(Color.LIGHT_GRAY);
-        //   JFreeChart chart = new JFreeChart("Test", JFreeChart.DEFAULT_TITLE_FONT, plot, true);
         f.add(new ChartPanel(chart) {
             @Override
             public Dimension getPreferredSize() {
@@ -78,3 +71,15 @@ public class BoxAndWhiskerChart {
         EventQueue.invokeLater(new BoxAndWhiskerChart()::display);
     }
 }
+
+/*
+Dtata preporcessing pipelin, process data from various file such as CSV,JSON and XML.The processing step for these
+fioles for formas are simmilar,but each file formatr requires specific steps for reading,parsing and saving
+Design a system that can process different file formats,while general flow (reading, parsing,saving) is the same
+but implementation for eacg step is differetncbased on file
+CSV: require reading line by line,parsing comma seperated value and saving it in a structed format
+JSON: requires reading a json file parsing objects and maping to class structure
+XML:reading a xml file,parsing it with xmlparser and saving
+in the client code we can easily process dufferetn file format by simply selecting appropriate processor,use
+design pattern in java to do this.Not actually full n
+ */
