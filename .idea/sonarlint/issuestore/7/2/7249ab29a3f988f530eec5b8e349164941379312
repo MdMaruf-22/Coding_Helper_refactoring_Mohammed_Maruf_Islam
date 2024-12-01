@@ -1,0 +1,28 @@
+
+w
+java:S1488"\Immediately return this expression instead of assigning it to the temporary variable "path".(ÿŒÑ–ûÿÿÿÿ
+‹
+java:S1488%"pImmediately return this expression instead of assigning it to the temporary variable "methodWithoutPunctuation".(ø£ÞËøÿÿÿÿ
+y
+java:S1488-"cImmediately return this expression instead of assigning it to the temporary variable "spaceRemove".(”‰¦¯
+2
+java:S1643"Use a StringBuilder instead.(óõè•
+2
+java:S1643B"Use a StringBuilder instead.(­àËÞ
+c
+java:S20955"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(…‚¬ã
+c	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿Ó²×
+V	java:S125"<This block of commented-out lines of code should be removed.(’ˆÓ˜úÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(Ù‘ºùÿÿÿÿ
+‡
+java:S1130!"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(‹Ûóûÿÿÿÿ
+V	java:S125#"<This block of commented-out lines of code should be removed.(ÿ¬ØØþÿÿÿÿ
+Q	java:S125&"<This block of commented-out lines of code should be removed.(¬£€ã
+`
+java:S18544"ERemove this useless assignment to local variable "methodContentList".(€‘ÂÑüÿÿÿÿ
+Ž
+java:S11302"xRemove the declaration of thrown exception 'java.io.FileNotFoundException' which is a subclass of 'java.io.IOException'.(óÿÝ
+Q
+java:S14814"6Remove this unused "methodContentList" local variable.(€‘ÂÑüÿÿÿÿ
+`
+java:S26747"JCheck the return value of the "read" call to see how many bytes were read.(¥×é¡

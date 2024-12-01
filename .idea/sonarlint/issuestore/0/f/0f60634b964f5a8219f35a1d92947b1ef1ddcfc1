@@ -1,0 +1,20 @@
+
+v
+java:S1854"5Remove this useless assignment to local variable "d".(Þ†»ßøÿÿÿÿJ$76e60e98-fe2f-4586-ab13-268a35f68da2
+f
+java:S1197"*Move the array designators [] to the type.(¨ÅÙþJ$048657ba-c0a2-4f42-b838-15d975ff09bf
+g
+java:S1481"&Remove this unused "d" local variable.(Þ†»ßøÿÿÿÿJ$50f2af46-9a9b-4d63-b5b6-3ca883b6d139
+|	java:S125"<This block of commented-out lines of code should be removed.(˜ÙÃÆýÿÿÿÿJ$bbe63d80-f649-4613-98e8-54a36edff271
+w	java:S125!"<This block of commented-out lines of code should be removed.(ÀÖŠJ$242eb374-522e-4f7e-8d38-44317d459062
+
+java:S1854?">Remove this useless assignment to local variable "chartPanel".(»—¹“ùÿÿÿÿJ$e0df47b6-3044-4a60-9d7b-71cd05350e99
+ˆ
+java:S3252("LUse static access with "javax.swing.WindowConstants" for "DISPOSE_ON_CLOSE".(§ýÏÁJ$956a2c20-188d-4fdf-9f2b-80fa9fcdaa7d
+|	java:S125,"<This block of commented-out lines of code should be removed.(·Ô¥™ùÿÿÿÿJ$99a77856-da65-40a8-a7ba-31dc6b80a4be
+
+java:S1117?">Rename "chartPanel" which hides the field declared at line 22.(»—¹“ùÿÿÿÿJ$2f9bb473-67ed-4d2c-af55-18d3d0cf8516
+p
+java:S1481?"/Remove this unused "chartPanel" local variable.(»—¹“ùÿÿÿÿJ$cedcc5c4-a51c-4f9a-8c85-4c0dd5d97fa6
+w	java:S125A"<This block of commented-out lines of code should be removed.(Žš±ñJ$feb4e297-22e9-4cab-95bc-46a6efca2f2a
+Ž	java:S100M"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”ÑúäùÿÿÿÿJ$f5c5bb06-a8cc-4a4d-94e6-19c317c8b7ec

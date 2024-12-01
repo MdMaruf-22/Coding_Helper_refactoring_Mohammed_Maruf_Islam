@@ -1,0 +1,10 @@
+
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(°®Îøÿÿÿÿ
+V
+java:S3518"";Make sure "count" can't be zero before doing this division.(¢®®÷ıÿÿÿÿ
+E
+java:S3740"/Provide the parametrized type for this generic.(À†Ÿ‡
+Q	java:S125"<This block of commented-out lines of code should be removed.(¯ş²¾
+C
+java:S1481"(Remove this unused "idf" local variable.(é—¸Îøÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(÷«Ç­úÿÿÿÿ

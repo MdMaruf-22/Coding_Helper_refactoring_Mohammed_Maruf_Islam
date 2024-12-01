@@ -72,23 +72,16 @@ public class TfIdfCalculate {
                 allterms2.add(term);//project2 unique word
             }
         }
-        //    System.out.println("" + allterms2);
-        //   allterms3.addAll(allterms1);
-        //  allterms3.addAll(allterms2);
     }
 
     public void IdfCal() {
         double idf;
-        //ArrayList<String> combine = new ArrayList<>();//combine project1 and project2 arrayList
         combineTerms.addAll(allterms1);
         combineTerms.addAll(allterms2);
-        // System.out.println("p=" + processProjectFile);
-        // System.out.println("combine="+combine);
         for (String term : combineTerms) {
             idf = new getTfIdf().getIdf(processProjectFile, term);
             idfmap.put(term, idf);
         }
-       // System.out.println("" + idfmap);
     }
 
     public void tfIdfVectorProject1() {
