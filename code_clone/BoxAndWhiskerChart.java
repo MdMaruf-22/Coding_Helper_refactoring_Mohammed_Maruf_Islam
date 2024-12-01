@@ -72,14 +72,3 @@ public class BoxAndWhiskerChart {
     }
 }
 
-/*
-Dtata preporcessing pipelin, process data from various file such as CSV,JSON and XML.The processing step for these
-fioles for formas are simmilar,but each file formatr requires specific steps for reading,parsing and saving
-Design a system that can process different file formats,while general flow (reading, parsing,saving) is the same
-but implementation for eacg step is differetncbased on file
-CSV: require reading line by line,parsing comma seperated value and saving it in a structed format
-JSON: requires reading a json file parsing objects and maping to class structure
-XML:reading a xml file,parsing it with xmlparser and saving
-in the client code we can easily process dufferetn file format by simply selecting appropriate processor,use
-design pattern in java to do this.Not actually full n
- */
