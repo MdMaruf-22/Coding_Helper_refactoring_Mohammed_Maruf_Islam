@@ -15,7 +15,7 @@ import java.nio.file.attribute.BasicFileAttributes;
 import java.util.ArrayList;
 
 public class Search {
-    public static final String PROCESS_METHOD_$ = "\\ProcessMethod$";
+    public static final String STRING = "\\ProcessMethod$";
     public static ArrayList<String> ProjectFileName = new ArrayList<>();
     public static void ProjectRead(String Projectpath, String processfilePath) throws IOException {
         ArrayList<String> filename = new ArrayList<>();
@@ -51,7 +51,7 @@ public class Search {
 
     public void processProject(String projectpath, String Projectname) throws IOException {
         String current = projectpath.replace("\\\\", "-").replace(":", "");
-        String processfilePath = "H:\\2-1\\project\\ProcessAllFiles" + PROCESS_METHOD_$ + current;
+        String processfilePath = "H:\\2-1\\project\\ProcessAllFiles" + STRING + current;
         File f1 = new File(processfilePath);
         if (!f1.exists()) {
             Path p1 = Paths.get(processfilePath);
@@ -65,7 +65,7 @@ public class Search {
        String currentpath = Command.currentPath;
     String path = new Command().pathGenerate(currentpath);    
     String current = path.replace("\\\\", "-").replace(":", "");
-    String Pathname = "H:\\2-1\\project\\ProcessAllFiles" + "\\ProcessMethod$" + current + "-" + projectname;
+    String Pathname = "H:\\2-1\\project\\ProcessAllFiles" + STRING+ current + "-" + projectname;
     return Pathname;
     
     }
