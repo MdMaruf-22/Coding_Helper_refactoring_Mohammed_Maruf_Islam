@@ -11,10 +11,7 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 public class ProcessSearchFile {
-
-    public void processMethod(String filename, String fileContent, String filepath, String processfilePath) throws IOException {
-        String currentpath = Command.currentPath;
-        String current = currentpath.replaceAll("\\\\", "-").replace(":", "");//location of current file
+    public void processMethod(String filename, String fileContent, String processfilePath) throws IOException {
         String stemWord = "";
         PreProcessing ob = new PreProcessing();
         String removePuncuation = ob.removePunctuation(fileContent);
@@ -52,8 +49,6 @@ public class ProcessSearchFile {
         String[] splitString = fileAsString.split(" ");
         String methods = "";
         String allmethod = "";
-        //String s = "BByTTheWay";
-        Pattern p = Pattern.compile("\\p{Lu}\\p{Ll}*");
         for (int i = 0; i < splitString.length; i++) {
             String nonbreak = "";
             String lower = splitString[i].toLowerCase();
