@@ -9,33 +9,23 @@ import java.nio.file.Paths;
 import java.util.Scanner;
 
 public class mainDecode {
-
     public void Decompress(String path) throws IOException {
         Decompress de;
         String p = new Command().pathGenerate(path);
         String compressFile = compressFile(p);
         String decompressFile = decompressFile(p);
-
         de = new Decompress(compressFile, decompressFile);
-
         de.decompressFile();
 
     }
 
     public String compressFile(String path) throws IOException {
-
         Scanner sc = new Scanner(System.in);
         System.out.print("\tEnter a compressed filename:");
-
 
         String filename = sc.nextLine().trim();
         String compressFilepath = path+"\\"+filename;
         boolean exist = new mainEncode().checkFileExist(compressFilepath);
-       // if(filename.isEmpty()){
-        //    System.out.println("\tInvalid filename");
-            
-     //   }
-
         try {
             if (filename.endsWith(".zip") && exist == true) {
                 
@@ -52,12 +42,10 @@ public class mainDecode {
             else {
                 System.out.println("\tInvalid filename");
                 new Command().command();
-
             }
         } catch (Exception e) {
             System.out.println("\tInvalid filename");
         }
-        //System.out.println(compressFilepath);
         return compressFilepath;
     }
 
@@ -65,12 +53,9 @@ public class mainDecode {
 
         Scanner sc = new Scanner(System.in);
         System.out.print("\tEnter Decompress file name: ");
-        // exit();
         String decompressFileName = sc.nextLine().trim();
-
-        if (!(decompressFileName.endsWith(".txt") | decompressFileName.endsWith(".java")) | decompressFileName.isEmpty()) {
+        if (!(decompressFileName.endsWith(".txt") || decompressFileName.endsWith(".java")) || decompressFileName.isEmpty()) {
             System.out.println("\tInvalid filename");
-            //   compressFile(p);
             new Command().command();
 
         }
@@ -101,8 +86,6 @@ public class mainDecode {
       new Command().command();
      
      }
-      
-    
     return exist;
     
     }

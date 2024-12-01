@@ -1,11 +1,7 @@
 package huffman;
-
-
 public class HuffmanTuple {
-	public char letter;
+	public char static final letter;
 	public String representation;
-
-	
 	public HuffmanTuple(char letter, String representation) {
 		this.letter = letter;
 		this.representation = representation;
