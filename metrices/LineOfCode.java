@@ -8,8 +8,8 @@ import java.io.InputStream;
 public class LineOfCode {
     public static double totalLineOfProject;
 public int countLines(String filename) throws IOException {
-    InputStream is = new BufferedInputStream(new FileInputStream(filename));
     try {
+        InputStream is = new BufferedInputStream(new FileInputStream(filename));
         byte[] c = new byte[1024];
         int count = 0;
         int readChars = 0;
@@ -26,7 +26,7 @@ public int countLines(String filename) throws IOException {
         }
         totalLineOfProject+=count;
         return count;
-    } finally {
-        is.close();
+    } catch(Exception e) {
+        e.print()
     }
 }}
