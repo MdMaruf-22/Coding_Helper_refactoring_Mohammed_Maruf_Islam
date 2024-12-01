@@ -8,8 +8,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class PreProcessing {
-    //  String stemWord="";
-
     public String ProcessFile(String filename, String content,String p) throws IOException {
         String stemWord = "";
         String methodWithotPunctuation = removePunctuation(content);
@@ -21,25 +19,16 @@ public class PreProcessing {
             String stem = stemmer.stemWord(word);
             stemWord = stemWord + " " + stem;
         }
+        Filewriter writer = new Filewriter();
 
-        //  System.out.println("" + stemWord.trim());
-        Filewriter writer = new Filewriter(); //fileWriter class objeect
-
-        String path = writer.createProcessFile(filename, stemWord.trim(),p);  //filename-filename with package
+        String path = writer.createProcessFile(filename, stemWord.trim(),p);
 
         return path;
     }
-
     public String removePunctuation(String p) throws IOException {
-
-        //    for (int i = 0; i < method.size(); i++) {
-        //   System.out.println(""+method.get(i));
         String methodWithoutPunctuation = p.replaceAll("\\p{Punct}", " ");
-        // System.out.println("" + removeMultipleSpaceAndLine(methodWithoutPunctuation));
         return methodWithoutPunctuation;
     }
-
-   
     public String removeSpace(String fileAsString) {
         String newLineRemove = fileAsString.trim().replace("\n", " ").replace("\r", "");
         String spaceRemove = newLineRemove.replaceAll("\\s+", " ").trim();
@@ -50,7 +39,13 @@ public class PreProcessing {
     public String removeKeyword(String fileAsString) throws FileNotFoundException, IOException {
         ArrayList<String> keyWordList = new ArrayList<>();
         ArrayList<String> methodContentList = new ArrayList<>();
-        FileInputStream fis = new FileInputStream("H:\\2-1\\Coding_Helper\\keyword.java"); //keyword.java is a file which contains all keyword
+        FileInputStream fis = new FileInputStream("H:\\2-1\\Coding_Helper\\keyword.java");
+        try{
+            FileInputStream fis = new FileInputStream("H:\\2-1\\Coding_Helper\\keyword.java");
+        }
+        catch (Exception e) {
+            e.print()
+        }
         byte[] b = new byte[fis.available()];
         fis.read(b);
 
@@ -64,7 +59,6 @@ public class PreProcessing {
         for (int i = 0; i < p.length; i++) {
             if (!(keyWordList.contains(p[i].trim()))) {
                 newString = newString + p[i] + " ";
-
             }
         }
         return newString;
